@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'Detail - Rachman')
+@section('title', 'Detail Mahasiswa - Rachman')
 
 
 @section('content')

@@ -54,13 +54,6 @@
         Interface
       </div>
 
-      <!-- Nav Item - Mahasiswa -->
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url('/mahasiswa') }}">
-          <i class="fas fa-fw fa-users"></i>
-          <span>Mahasiswa</span></a>
-      </li>
-
       <!-- Nav Item - Student -->
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/student') }}">

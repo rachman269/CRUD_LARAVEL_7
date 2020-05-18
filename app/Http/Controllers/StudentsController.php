@@ -25,7 +25,7 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('student.create');
     }
 
     /**
@@ -36,7 +36,35 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // --------Cara Kesatu untuk simpan data--------
+        // $student = new Student;
+        // $student->nama = $request->nama;
+        // $student->npm = $request->npm;
+        // $student->jurusan = $request->jurusan;
+        // $student->email = $request->email;
+        // $student->alamat = $request->alamat;
+
+        // $student->save();
+
+        // -------- Cara Kedua Simpan data --------------------------------
+        // Student::create([
+        //     'nama' => $request->nama,
+        //     'npm' => $request->npm,
+        //     'jurusan' => $request->jurusan,
+        //     'email' => $request->email,
+        //     'alamat' => $request->alamat
+        // ]);
+
+        $request->validate([
+            'nama' => 'required',
+            'npm' => 'required|size:7',
+            'jurusan' => 'required',
+            'email' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        Student::create($request->all());
+        return redirect('/student')->with('status', 'Data Mahasiswa Berhasil Ditambahkan !');
     }
 
     /**
