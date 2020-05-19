@@ -18,7 +18,11 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/mahasiswa', 'MahasiswaController@index');
 
-Route::get('/student', 'StudentsController@index');
-Route::get('/student/create', 'StudentsController@create');
-Route::get('/student/{student}', 'StudentsController@show');
-Route::post('/student', 'StudentsController@store');
+// Route::get('/student', 'StudentsController@index');
+// Route::get('/student/create', 'StudentsController@create');
+// Route::get('/student/{student}', 'StudentsController@show');
+// Route::post('/student', 'StudentsController@store');
+// Route::delete('/student/{student}', 'StudentsController@destroy');
+// Route::get('/student/{student}/edit', 'StudentsController@edit');
+// Route::patch('/student/{student}', 'StudentsController@update');
+Route::resource('student', 'StudentsController');

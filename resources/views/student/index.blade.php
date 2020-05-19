@@ -38,7 +38,7 @@
             <td>{{ $student->npm }}</td>
             <td>{{ $student->jurusan }}</td>
             <td>
-                <a href="/student/{{ $student->id }}" class="badge badge-info">Detail</a>
+                <a href="{{ url('/student/' . $student->id) }}" class="badge badge-info">Detail</a>
             </td>
           </tr>
           @endforeach
